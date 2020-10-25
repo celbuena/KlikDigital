@@ -21,27 +21,27 @@ BaseUrl : localhost:12345
  - Endpoint: [BaseUrl]/users/register
  - Method  : POST
  - Request Body :
-  javascript
+  ```javascript
   { 
     "username": "<string>",
     "password": "<string>",
     "email":"<string>",
     "phone_number":"<string>"
   }
-  
+  ```
  - Password must be at least 6 character or more
  - Example:
  - - Request Body:
-     javascript
+     ```javascript
         {
         	 "username": "buena123",
              "password": "buena123",
              "email":"buena134@gmail.com",
              "phone_number":"081234351231"
         }
-     
+     ```
  - - Response Body:    
-     javascript
+     ```javascript
         {
          "data": {
                  "username": "buena123",
@@ -52,7 +52,7 @@ BaseUrl : localhost:12345
         "message": "OK",
         "status_code": 200
         }
-     
+     ```
 
 
 ### User Login API
@@ -60,22 +60,22 @@ BaseUrl : localhost:12345
  - Endpoint  : [BaseUrl]/users/login
  - Method    : POST
  - Request Body:
- javascript
+ ```javascript
 {
     "username":"<string>",
     "password":"<string>"
 }
-
+```
  - Example:
  - - Request Body:
-     javascript
+   ```  javascript
          {
              "username":"buena123",
              "password":"buena123"    	
          }
-     
+     ```
  - - Response Body: 
-      javascript
+      ```javascript
         {
             "data": {
                 "uuid": "02381104-aaee-4863-86f8-3d3688a1d6f0"
@@ -83,28 +83,28 @@ BaseUrl : localhost:12345
             "message": "OK",
             "status_code": 200
         }
-        
+        ```
  
  ### Create Transaction
  - Endpoint : [BaseUrl]/create/transactions
  - Method   : POST
  - Request Body:
-  javascript
+  ```javascript
  {
     "method":"<string>",
     "uuid":"<string>"
 }
-  
+  ```
  - Example:
  - - Request Body:
-     javascript
+     ```javascript
         {
         	"method":"GPY",
             "uuid":"02381104-aaee-4863-86f8-3d3688a1d6f0"
         }
-     
+     ```
  - - Response Body
-     javascript
+     ```javascript
         {
             "data": {
                 "transaction_number": "GPY1603671712a1d6f0"
@@ -112,3 +112,4 @@ BaseUrl : localhost:12345
             "message": "OK",
             "status_code": 200
         }
+```
